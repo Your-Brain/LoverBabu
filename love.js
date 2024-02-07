@@ -2,8 +2,8 @@ let img = document.querySelector("img");
 let input = document.querySelector(".input");
 
 let userInput = prompt("I LOVE YOU\n DO YOU LOVE ME ?");
-while (userInput === null) {
-    userInput = prompt("I LOVE YOU\n DO YOU LOVE ME ?");
+while (userInput === null || userInput.trim() === "") {
+    userInput = prompt("I LOVE YOU,\n DO YOU LOVE ME ?");
 }
 
 // Responds to user input with appropriate text content
@@ -23,9 +23,9 @@ switch (userInput) {
     case "Maybe":
         input.textContent = "Let's see what happens";
         break;
+
     // Add more cases as needed
     default:
         input.textContent = "I don't understand:(";
         break;
 }
-
